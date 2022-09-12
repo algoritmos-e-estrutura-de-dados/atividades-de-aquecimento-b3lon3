@@ -14,5 +14,5 @@ class Vetor:
         return str(self.tamanho)
 
     def show(self):
-        for i in range(self.tamanho):
+        for i in range(self.cheios):
             print(self.items[i])
