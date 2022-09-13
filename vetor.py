@@ -9,6 +9,10 @@ class Vetor:
         if (self.cheios < self.tamanho):
             self.items.append(item)
             self.cheios+=1
+        else:
+            self.tamanho += 10
+            self.items.append(item)
+            self.cheios+=1
 
     def __str__(self):
         return str(self.tamanho)
