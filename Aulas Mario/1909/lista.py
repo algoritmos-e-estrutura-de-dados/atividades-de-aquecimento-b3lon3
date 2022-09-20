@@ -21,7 +21,7 @@ class Lista:
         aux = self.inicio
         print("[", end = '')
         while (aux.proximo != None):
-            print(f'{aux.valor}', end = ', ')
+            print(aux.valor, end = ', ')
             aux = aux.proximo
         print(aux.valor)
         print("]")
