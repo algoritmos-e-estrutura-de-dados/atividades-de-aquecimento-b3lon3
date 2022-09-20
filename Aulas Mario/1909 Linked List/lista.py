@@ -2,7 +2,6 @@ from node import Node
 
 
 class Lista:
-    inicio = None
 
     def __init__(self):
         self.inicio = None
@@ -13,28 +12,31 @@ class Lista:
         else:
             self.adicionar_no_fim(valor)
 
-    def remover(self, valor):
-        anterior = None
-        aux = self.inicio
-
-        while (aux != valor):
-            anterior = aux
-            aux = aux.proximo
-        self.valor = None
-
-
-
     def adicionar_no_inicio(self, valor):
-        print("nao fiz kkk")
+        novo = Node(valor)
+        novo.proximo = self.inicio
+        self.inicio = novo
 
     def adicionar_no_fim(self, valor):
+        # inserir qnd nao tem nada
         if (self.inicio == None):
             self.inicio = Node(valor, None)
         else:
+            # percorre e insere no fim
             aux = self.inicio
             while (aux.proximo != None):
                 aux = aux.proximo
             aux.proximo = Node(valor, None)
+
+    def remover(self, valor):
+        aux = self.inicio
+        if aux.valor == valor:
+            aux.valor = None
+            self.inicio = aux.proximo
+        while aux.proximo != None:
+            aux = aux.proximo
+            if aux.valor == valor:
+                aux.valor = None
 
     def show(self):
         aux = self.inicio
