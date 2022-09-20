@@ -24,13 +24,10 @@ class Fracao:
 
         return Fracao(num,den)
 
-    def simplify(self):
-        #tentei
-        if self.numerador % self.denominador == 0 and self.denominador % self.numerador == 0:
-            num = self.numerador / self.denominador
-            den = self.denominador / self.numerador
+    def simplify (self,fracao):
+        div = math.gcd(fracao.numerador , fracao.denominador)
 
-            return (num,"/",den)
+        return f"{fracao.numerador/div}/{fracao.denominador/div}"
 
     def solve(self):
         return self.numerador / self.denominador
