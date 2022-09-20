@@ -2,9 +2,10 @@ from lista import Lista
 
 lista = Lista()
 
-lista.adicionar(1)
-lista.adicionar(2)
-lista.adicionar(3)
-lista.adicionar(4)
+lista.adicionar_no_fim(4)
+lista.adicionar_no_fim(2)
+lista.adicionar_no_fim(3)
+
+lista.remover(4)
 
 lista.show()
